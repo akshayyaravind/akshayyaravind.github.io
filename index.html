@@ -799,6 +799,9 @@ function enterSite() {
     intro.style.display = 'none';
     document.getElementById('main').style.display = 'block';
     document.getElementById('musicBtn').style.display = 'flex';
+
+const audio = document.getElementById('bgMusic');
+audio.play().catch(() => {});
     document.querySelectorAll('.scroll-reveal').forEach(el => observer.observe(el));
     updateCountdown();
     setInterval(updateCountdown, 1000);
